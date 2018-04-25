@@ -1,0 +1,16 @@
+F:\Milk\Bot_Base\Bot_Base\bin\Debug\Bot_Base.exe.config
+F:\Milk\Bot_Base\Bot_Base\bin\Debug\Bot_Base.exe
+F:\Milk\Bot_Base\Bot_Base\bin\Debug\Bot_Base.pdb
+F:\Milk\Bot_Base\Bot_Base\obj\Debug\Bot_Base.csprojResolveAssemblyReference.cache
+F:\Milk\Bot_Base\Bot_Base\obj\Debug\Bot_Base.csproj.CoreCompileInputs.cache
+F:\Milk\Bot_Base\Bot_Base\obj\Debug\Bot_Base.exe
+F:\Milk\Bot_Base\Bot_Base\obj\Debug\Bot_Base.pdb
+F:\Milk\Bot_Base\Bot_Base\bin\Debug\DSharpPlus.CommandsNext.dll
+F:\Milk\Bot_Base\Bot_Base\bin\Debug\DSharpPlus.dll
+F:\Milk\Bot_Base\Bot_Base\bin\Debug\log4net.dll
+F:\Milk\Bot_Base\Bot_Base\bin\Debug\Newtonsoft.Json.dll
+F:\Milk\Bot_Base\Bot_Base\bin\Debug\DSharpPlus.xml
+F:\Milk\Bot_Base\Bot_Base\bin\Debug\DSharpPlus.CommandsNext.xml
+F:\Milk\Bot_Base\Bot_Base\bin\Debug\log4net.xml
+F:\Milk\Bot_Base\Bot_Base\bin\Debug\Newtonsoft.Json.xml
+F:\Milk\Bot_Base\Bot_Base\obj\Debug\Bot_Base.csproj.CopyComplete
