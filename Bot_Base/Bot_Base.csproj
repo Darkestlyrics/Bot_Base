@@ -57,8 +57,8 @@
   <ItemGroup>
     <Compile Include="Classes\AppState.cs" />
     <Compile Include="Classes\Bot_Base.cs" />
-    <Compile Include="Classes\CommandHolder.cs" />
     <Compile Include="Classes\Config.cs" />
+    <Compile Include="Classes\InternalCommands.cs" />
     <Compile Include="Classes\Logger.cs" />
     <Compile Include="Classes\Result.cs" />
     <Compile Include="Enums\Enums.cs" />

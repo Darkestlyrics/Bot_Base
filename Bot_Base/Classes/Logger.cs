@@ -4,11 +4,11 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using SoggyBot.Enums;
+using Bot_Base.Enums;
 using log4net;
-using static SoggyBot.Enums.Enums;
+using static Bot_Base.Enums.Enums;
 
-namespace SoggyBot.Classes {
+namespace Bot_Base.Classes {
     class Logger {
         private static readonly ILog Log = null;
 

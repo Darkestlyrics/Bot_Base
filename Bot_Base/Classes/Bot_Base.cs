@@ -1,8 +1,9 @@
-﻿using DSharpPlus;
+﻿using Bot_Base.Classes;
+using DSharpPlus;
 using DSharpPlus.CommandsNext;
 using DSharpPlus.Entities;
 using DSharpPlus.EventArgs;
-using SoggyBot.Helpers;
+using Bot_Base.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +11,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace SoggyBot.Classes {
+namespace Bot_Base.Classes {
     class Bot_Base {
         #region Properties
 
@@ -41,7 +42,7 @@ namespace SoggyBot.Classes {
                 EnableMentionPrefix = true
             };
             Commands = Client.UseCommandsNext(ccfg);
-            Commands.RegisterCommands<CommandHolder>();
+            Commands.RegisterCommands<InternalCommands>();
         }
 
         #endregion

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SoggyBot.Enums {
+namespace Bot_Base.Enums {
     public static class Enums {
         public enum LogLevel {
             FATAL,

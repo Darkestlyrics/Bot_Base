@@ -1,8 +1,9 @@
-﻿using System;
+﻿using DSharpPlus.CommandsNext;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 
-namespace SoggyBot.Classes {
+namespace Bot_Base.Classes {
     static class AppState {
         /// <summary>
         /// Global Client Object
@@ -12,7 +13,10 @@ namespace SoggyBot.Classes {
         /// /Global Logger Object
         /// </summary>
         public static Logger Logger { get; set; }
-
+        /// <summary>
+        /// Global CommandNextModule
+        /// </summary>
+        public static CommandsNextModule CommandsNextModule { get; set; }
     }
 
 }

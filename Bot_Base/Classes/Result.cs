@@ -1,4 +1,4 @@
-﻿namespace SoggyBot.Classes {
+﻿namespace Bot_Base.Classes {
     class MethodResult {
 
         public bool Status { get; set; }

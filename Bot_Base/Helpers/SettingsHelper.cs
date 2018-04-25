@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SoggyBot.Helpers {
+namespace Bot_Base.Helpers {
   static  class SettingsHelper {
         /// <summary>
         /// Get the value of a setting in the Settings file
