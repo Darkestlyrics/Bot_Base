@@ -25,25 +25,46 @@ namespace Bot_Base.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string Name {
+        [global::System.Configuration.DefaultSettingValueAttribute("!")]
+        public string Prefix {
             get {
-                return ((string)(this["Name"]));
+                return ((string)(this["Prefix"]));
             }
             set {
-                this["Name"] = value;
+                this["Prefix"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("NDQwMzk4ODMxMTc2Mzg0NTE0.DchJfg.oA2c9r3wLivYc3s8AEOgaN81uUI")]
         public string DiscordToken {
             get {
                 return ((string)(this["DiscordToken"]));
             }
             set {
                 this["DiscordToken"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Milk")]
+        public string ServerName {
+            get {
+                return ((string)(this["ServerName"]));
+            }
+            set {
+                this["ServerName"] = value;
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Bot_Base")]
+        public string ServiceName {
+            get {
+                return ((string)(this["ServiceName"]));
             }
         }
     }

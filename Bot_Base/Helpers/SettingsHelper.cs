@@ -18,7 +18,7 @@ namespace Bot_Base.Helpers {
         private static string getValue(string Name) {
             string res = null;
             if (Exists(Name)) {
-                res = Bot_Base.Properties.Settings.Default[Name].ToString();
+                res = Properties.Settings.Default[Name].ToString();
             }
             return res;
         }

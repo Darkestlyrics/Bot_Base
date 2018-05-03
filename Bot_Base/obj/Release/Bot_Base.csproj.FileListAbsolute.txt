@@ -1,0 +1,16 @@
+F:\Milk\GIT\Bot_Base\Bot_Base\bin\Release\Bot_Base.exe.config
+F:\Milk\GIT\Bot_Base\Bot_Base\bin\Release\Bot_Base.exe
+F:\Milk\GIT\Bot_Base\Bot_Base\bin\Release\Bot_Base.pdb
+F:\Milk\GIT\Bot_Base\Bot_Base\bin\Release\DSharpPlus.CommandsNext.dll
+F:\Milk\GIT\Bot_Base\Bot_Base\bin\Release\DSharpPlus.dll
+F:\Milk\GIT\Bot_Base\Bot_Base\bin\Release\log4net.dll
+F:\Milk\GIT\Bot_Base\Bot_Base\bin\Release\Newtonsoft.Json.dll
+F:\Milk\GIT\Bot_Base\Bot_Base\bin\Release\DSharpPlus.xml
+F:\Milk\GIT\Bot_Base\Bot_Base\bin\Release\DSharpPlus.CommandsNext.xml
+F:\Milk\GIT\Bot_Base\Bot_Base\bin\Release\log4net.xml
+F:\Milk\GIT\Bot_Base\Bot_Base\bin\Release\Newtonsoft.Json.xml
+F:\Milk\GIT\Bot_Base\Bot_Base\obj\Release\Bot_Base.csprojResolveAssemblyReference.cache
+F:\Milk\GIT\Bot_Base\Bot_Base\obj\Release\Bot_Base.csproj.CoreCompileInputs.cache
+F:\Milk\GIT\Bot_Base\Bot_Base\obj\Release\Bot_Base.csproj.CopyComplete
+F:\Milk\GIT\Bot_Base\Bot_Base\obj\Release\Bot_Base.exe
+F:\Milk\GIT\Bot_Base\Bot_Base\obj\Release\Bot_Base.pdb

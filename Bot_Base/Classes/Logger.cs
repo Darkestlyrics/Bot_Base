@@ -1,20 +1,38 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Bot_Base.Enums;
 using log4net;
+using log4net.Appender;
+using log4net.Repository;
 using static Bot_Base.Enums.Enums;
 
 namespace Bot_Base.Classes {
     class Logger {
-        private static readonly ILog Log = null;
+        private readonly ILog Log = null;
 
-
-       static Logger() {
-          Log =  LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+        public Logger() {
+            Log = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+            //get the current logging repository for this application
+            ILoggerRepository repository = LogManager.GetRepository();
+            //get all of the appenders for the repository
+            IAppender[] appenders = repository.GetAppenders();
+            //only change the file path on the 'FileAppenders'
+            foreach (IAppender appender in (from iAppender in appenders
+                                            where iAppender is FileAppender
+                                            select iAppender)) {
+                FileAppender fileAppender = appender as FileAppender;
+                //set the path to your logDirectory using the original file name defined
+                //in configuration
+                fileAppender.File = Path.Combine(AppState.Path,"Logs","Log.txt" );
+                //make sure to call fileAppender.ActivateOptions() to notify the logging
+                //sub system that the configuration for this appender has changed.
+                fileAppender.ActivateOptions();
+            }
         }
 
        /// <summary>
@@ -24,7 +42,7 @@ namespace Bot_Base.Classes {
        /// <param name="LogText">The text to write to the log</param>
        /// <param name="ex">the exception encountered</param>
         public void WriteLog(LogLevel level, string LogText, Exception ex = null) {
-            writeLog(level, LogText, ex);
+           writeLog(level, LogText, ex);
         }
 
         private void writeLog(LogLevel level, string LogText, Exception ex) {

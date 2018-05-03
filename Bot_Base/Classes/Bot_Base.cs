@@ -3,6 +3,8 @@ using DSharpPlus;
 using DSharpPlus.CommandsNext;
 using DSharpPlus.Entities;
 using DSharpPlus.EventArgs;
+using DSharpPlus.VoiceNext;
+using DSharpPlus.VoiceNext.Codec;
 using Bot_Base.Helpers;
 using System;
 using System.Collections.Generic;
@@ -27,7 +29,6 @@ namespace Bot_Base.Classes {
 
         public bool Connected { get; set; }
 
-        public CommandsNextModule Commands { get; set; }
 
         #endregion
 
@@ -37,12 +38,18 @@ namespace Bot_Base.Classes {
             ServerName = serverName;
             Client = new DiscordClient(dsConfig);
             var ccfg = new CommandsNextConfiguration {
-                StringPrefix = ";;",
-                EnableDms = true,
-                EnableMentionPrefix = true
+                StringPrefix = SettingsHelper.GetValue("Prefix"),
+                EnableDms = false,
+                EnableMentionPrefix = false
             };
-            Commands = Client.UseCommandsNext(ccfg);
-            Commands.RegisterCommands<InternalCommands>();
+            var vcfg = new VoiceNextConfiguration {
+                VoiceApplication = VoiceApplication.Music,
+                EnableIncoming = true
+            };
+            AppState.CommandsNextModule = Client.UseCommandsNext(ccfg);
+            AppState.CommandsNextModule.RegisterCommands<InternalCommands>();
+            AssemblyHelper.GetAssemblies().ForEach(o => AppState.CommandsNextModule.RegisterCommands(o));
+            AppState.VoiceNextClient = Client.UseVoiceNext(vcfg);     
         }
 
         #endregion
@@ -160,7 +167,7 @@ namespace Bot_Base.Classes {
         }
 
         private void getUsers() {
-            Users = Client.Guilds.First(gg => gg.Value.Name == ServerName).Value.Members.Where(uu => uu.IsBot == false && !uu.Roles.Any(role => role.Name.ToUpper() == "CORE")).ToList<DiscordUser>();
+            Users = Client.Guilds.First(gg => gg.Value.Name == ServerName).Value.Members.Where(uu => uu.IsBot == false).ToList<DiscordUser>();
         }
 
         private void getChannels() {
@@ -185,9 +192,11 @@ namespace Bot_Base.Classes {
 
         private void setupEvents() {
             Client.ClientErrored += _Client_ClientError;
-             Client.MessageCreated += _Client_MessageCreated;
+            //Client.MessageCreated += _Client_MessageCreated;
+            Client.GuildMemberAdded += Client_GuildMemberAdded;
+            Client.GuildMemberRemoved += Client_GuildMemberRemoved;
+            Client.DmChannelCreated += Client_DmChannelCreated;
         }
-
 
         private async void sendMessage(DiscordChannel c, string s) {
             await Client.SendMessageAsync(c, s);
@@ -209,19 +218,34 @@ namespace Bot_Base.Classes {
             await Task.Delay(0);
         }
 
-
-        private async Task _Client_MessageCreated(MessageCreateEventArgs e) {
-            //For private users
-            if (!e.Author.IsBot) {    //because this shit is retarded
-            }
-            //for channels
-                switch (e.Channel.Name) {
-                    default:
-                        break;
-                }
-            
+        private async Task Client_GuildMemberAdded(GuildMemberAddEventArgs e) {
+            AppState.Logger.WriteLog(Enums.Enums.LogLevel.INFO, $"{e.Member.DisplayName} Joined");
+            SendDM(e.Member.Username, $"Welcome to {ServerName}");
             await Task.Delay(0);
         }
+
+        private async Task Client_GuildMemberRemoved(GuildMemberRemoveEventArgs e) {
+                AppState.Logger.WriteLog(Enums.Enums.LogLevel.INFO, $"{e.Member.DisplayName} Left");
+                SendDM(e.Member.Username, $"Cheers {e.Member.Username}");
+                await Task.Delay(0);
+            
+        }
+
+        private Task Client_DmChannelCreated(DmChannelCreateEventArgs e) => throw new NotImplementedException();
+
+        //CG Retired
+        //private async Task _Client_MessageCreated(MessageCreateEventArgs e) {
+        //    //For private users
+        //    if (!e.Author.IsBot) {    //because this shit is retarded
+        //    }
+        //    //for channels
+        //        switch (e.Channel.Name) {
+        //            default:
+        //                break;
+        //        }
+
+        //    await Task.Delay(0);
+        //}
 
         #endregion
 

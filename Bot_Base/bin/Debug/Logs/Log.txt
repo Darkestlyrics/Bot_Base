@@ -1,0 +1,27 @@
+﻿2018-04-30 12:07:27,291 INFO [5] Bot_Base.Classes.Logger.writeLog - Starting Service
+2018-04-30 12:17:29,559 INFO [5] Bot_Base.Classes.Logger.writeLog - Starting Service
+2018-04-30 12:20:13,368 INFO [5] Bot_Base.Classes.Logger.writeLog - Starting Service
+2018-04-30 14:17:14,452 INFO [5] writeLog - Starting Service
+2018-04-30 14:18:03,308 INFO [21] writeLog - Chris_Green Left
+2018-04-30 14:18:58,023 INFO [5] writeLog - Starting Service
+2018-04-30 14:48:11,223 INFO [5] writeLog - Starting Service
+2018-04-30 14:58:53,976 INFO [5] writeLog - Starting Service
+2018-04-30 17:01:29,042 INFO [5] writeLog - Starting Service
+2018-04-30 17:05:53,993 INFO [5] writeLog - Starting Service
+2018-04-30 17:21:37,906 INFO [5] writeLog - Starting Service
+2018-04-30 17:22:23,764 ERROR [17] writeLog - Error occured
+System.AggregateException: Exceptions occured within one or more event handlers. Check InnerExceptions for details. ---> System.NotImplementedException: The method or operation is not implemented.
+   at Bot_Base.Classes.Bot_Base.Client_DmChannelCreated(DmChannelCreateEventArgs e) in F:\Milk\GIT\Bot_Base\Bot_Base\Classes\Bot_Base.cs:line 233
+   at DSharpPlus.AsyncEvent`1.<InvokeAsync>d__13.MoveNext()
+   --- End of inner exception stack trace ---
+---> (Inner Exception #0) System.NotImplementedException: The method or operation is not implemented.
+   at Bot_Base.Classes.Bot_Base.Client_DmChannelCreated(DmChannelCreateEventArgs e) in F:\Milk\GIT\Bot_Base\Bot_Base\Classes\Bot_Base.cs:line 233
+   at DSharpPlus.AsyncEvent`1.<InvokeAsync>d__13.MoveNext()<---
+
+2018-05-01 00:02:58,311 INFO [5] writeLog - Starting Service
+2018-05-01 00:08:36,609 INFO [5] writeLog - Starting Service
+2018-05-01 00:10:26,701 INFO [5] writeLog - Starting Service
+2018-05-01 00:16:32,325 INFO [5] writeLog - Starting Service
+2018-05-01 10:29:08,278 INFO [5] writeLog - Starting Service
+2018-05-02 14:55:37,197 INFO [5] writeLog - Starting Service
+2018-05-02 21:37:12,455 INFO [5] writeLog - Starting Service
