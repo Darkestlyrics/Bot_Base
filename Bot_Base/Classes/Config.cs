@@ -20,8 +20,6 @@ namespace Bot_Base.Classes {
         public static GlobalConfig conf { get; internal set; }
         public static void Init() {
             conf = new GlobalConfig();
-            
-
         }
     }
 }

@@ -42,3 +42,5 @@ F:\Milk\GIT\Bot_Base\Bot_Base\bin\Debug\DSharpPlus.VoiceNext.dll
 F:\Milk\GIT\Bot_Base\Bot_Base\bin\Debug\DSharpPlus.VoiceNext.xml
 F:\Milk\GIT\Bot_Base\Bot_Base\bin\Debug\DSharpPlus.Interactivity.dll
 F:\Milk\GIT\Bot_Base\Bot_Base\bin\Debug\DSharpPlus.Interactivity.xml
+F:\Milk\GIT\Bot_Base\Bot_Base\bin\Debug\Microsoft.Web.XmlTransform.dll
+F:\Milk\GIT\Bot_Base\Bot_Base\bin\Debug\NuGet.Core.dll
