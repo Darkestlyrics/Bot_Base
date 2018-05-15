@@ -35,22 +35,26 @@ namespace Bot_Base.Classes {
         #region Constructor
 
         public Bot_Base(string serverName, DiscordConfiguration dsConfig, bool autostart = false) {
-            ServerName = serverName;
-            Client = new DiscordClient(dsConfig);
-            var ccfg = new CommandsNextConfiguration {
-                StringPrefix = SettingsHelper.GetValue("Prefix"),
-                EnableDms = false,
-                EnableMentionPrefix = false
-            };
-            var vcfg = new VoiceNextConfiguration {
-                VoiceApplication = VoiceApplication.Music,
-                EnableIncoming = true
-            };
-            AppState.CommandsNextModule = Client.UseCommandsNext(ccfg);
-            AppState.CommandsNextModule.RegisterCommands<InternalCommands>();
-            AssemblyHelper.GetAssemblies().ForEach(o => AppState.CommandsNextModule.RegisterCommands(o));
-            AppState.VoiceNextClient = Client.UseVoiceNext(vcfg);     
-        }
+            try {
+                ServerName = serverName;
+                Client = new DiscordClient(dsConfig);
+                var ccfg = new CommandsNextConfiguration {
+                    StringPrefix = SettingsHelper.GetValue("Prefix"),
+                    EnableDms = false,
+                    EnableMentionPrefix = false
+                };
+                var vcfg = new VoiceNextConfiguration {
+                    VoiceApplication = VoiceApplication.Music,
+                    EnableIncoming = true
+                };
+                AppState.CommandsNextModule = Client.UseCommandsNext(ccfg);
+                AppState.CommandsNextModule.RegisterCommands<InternalCommands>();
+                AssemblyHelper.GetAssemblies().ForEach(o => AppState.CommandsNextModule.RegisterCommands(o));
+                AppState.VoiceNextClient = Client.UseVoiceNext(vcfg);
+            } catch (Exception ex) {
+                AppState.Logger.WriteLog(Enums.Enums.LogLevel.FATAL, "Could not start Service", ex);
+            }
+            }
 
         #endregion
 
