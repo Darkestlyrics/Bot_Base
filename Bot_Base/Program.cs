@@ -14,7 +14,7 @@ namespace Bot_Base {
             ServiceBase[] ServicesToRun;
             ServicesToRun = new ServiceBase[]
             {
-                new Bot_BaseService()
+                new BotBaseService()
             };
             ServiceBase.Run(ServicesToRun);
         }

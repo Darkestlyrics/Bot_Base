@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2037
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bot_Base", "Bot_Base\Bot_Base.csproj", "{66D0767F-11F1-4C43-9AA1-494327CB08B2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BotBase", "Bot_Base\BotBase.csproj", "{66D0767F-11F1-4C43-9AA1-494327CB08B2}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj", "{4A616C91-B1B1-48B1-8758-F9174CF3EB2F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,8 @@ Global
 		{66D0767F-11F1-4C43-9AA1-494327CB08B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{66D0767F-11F1-4C43-9AA1-494327CB08B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{66D0767F-11F1-4C43-9AA1-494327CB08B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A616C91-B1B1-48B1-8758-F9174CF3EB2F}.Debug|Any CPU.ActiveCfg = Debug
+		{4A616C91-B1B1-48B1-8758-F9174CF3EB2F}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

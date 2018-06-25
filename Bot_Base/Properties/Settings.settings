@@ -6,13 +6,13 @@
       <Value Profile="(Default)">!</Value>
     </Setting>
     <Setting Name="DiscordToken" Type="System.String" Scope="User">
-      <Value Profile="(Default)">NDQwMzk4ODMxMTc2Mzg0NTE0.DchJfg.oA2c9r3wLivYc3s8AEOgaN81uUI</Value>
+      <Value Profile="(Default)" />
     </Setting>
     <Setting Name="ServerName" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Milk</Value>
+      <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="ServiceName" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">Bot_Base</Value>
+    <Setting Name="ServiceName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">BotBase</Value>
     </Setting>
   </Settings>
 </SettingsFile>

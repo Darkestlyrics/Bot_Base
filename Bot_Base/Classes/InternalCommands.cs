@@ -1,4 +1,5 @@
-﻿using DSharpPlus.CommandsNext;
+﻿using Bot_Base.Forms;
+using DSharpPlus.CommandsNext;
 using DSharpPlus.CommandsNext.Attributes;
 using DSharpPlus.Entities;
 using DSharpPlus.EventArgs;
@@ -30,6 +31,7 @@ namespace Bot_Base.Classes {
             var rnd = new Random();
             await ctx.RespondAsync($"🎲 Your random number is: {rnd.Next(min, max)}");
         }
+
         [Command("poll"), Description("Run a poll with reactions.")]
         public async Task Poll(CommandContext ctx, [Description("How long should the poll last.")] TimeSpan duration, [Description("What options should people have.")] params DiscordEmoji[] options) {
             // first retrieve the interactivity module from the client
